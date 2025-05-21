@@ -1,0 +1,89 @@
+/* Reset margins */
+body, html {
+  margin: 0; 
+  height: 100%;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* Layout container using CSS Grid */
+#container {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Sidebar 200px wide */
+  grid-template-rows: 50px 1fr;     /* Header 50px high */
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  grid-area: header;
+  background-color: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav {
+  grid-area: sidebar;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+#main {
+  grid-area: main;
+  position: relative;
+  background-color: #000;
+}
+
+/* Make canvas fill main area */
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+body { margin: 0; overflow: hidden; }
+canvas { display: block; }
+
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.nav-section {
+    margin-top: 15px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 16px;
+}
+
+ul {
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #bbb;
+}

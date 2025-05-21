@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Coordinate Plane</title>
+    <link rel="stylesheet" href="Gript.css" />
+</head>
+<body>
+    <div id="container">
+        <header>Gript</header>
+        <nav>
+            <!-- Image Upload Section -->
+            <div class="nav-section">
+                <h3>Upload Image</h3>
+                <input type="file" id="imageFileInput" accept="image/*" />
+                <img id="previewImage" style="max-width: 100%; margin-top: 10px; display: none;" alt="Image Preview" />
+                <button id="addSpriteBtn">ADD SPRITE</button>
+            </div>
+
+            <!-- Texture Filtering Section -->
+            <div class="nav-section" id="filteringSection">
+                <h3>Texture Filtering</h3>
+                <select id="filterSelect" style="width: 100%; margin-bottom: 10px; padding: 6px; background-color: #444; color: white; border: none; border-radius: 3px;">
+                    <option value="Nearest Neighbor">Nearest Neighbor</option>
+                    <option value="Bilinear" selected>Bilinear</option>
+                    <option value="Trilinear">Trilinear</option>
+                </select>
+                <button id="applyFilterBtn">Apply Filter</button>
+            </div>
+
+            <!-- Transform Controls Section -->
+            <div class="nav-section" id="transformControls">
+                <h3>Transform Controls</h3>
+                <button id="translateBtn">Translate (Move)</button>
+                <button id="rotateBtn">Rotate</button>
+                <button id="scaleBtn">Scale</button>
+                <button id="deleteBtn">Delete Selected</button>
+            </div>
+            
+            <!-- Instructions Section -->
+            <div class="nav-section">
+                <h3>Instructions</h3>
+                <ul>
+                    <li>Click to select a sprite</li>
+                    <li>Press <strong>Tab</strong> to cycle between sprites</li>
+                    <li>Press <strong>Space</strong> to change transform mode</li>
+                    <li>Press <strong>Escape</strong> to deselect</li>
+                    <li>Right-click + drag to rotate view</li>
+                    <li>Scroll to zoom in/out</li>
+                </ul>
+            </div>
+        </nav>
+        <main id="main"></main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/TransformControls.js"></script>
+    <script src="Gript.js"></script>
+</body>
+</html>
